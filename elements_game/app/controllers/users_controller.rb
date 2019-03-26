@@ -13,4 +13,18 @@ class UsersController < ApplicationController
     }
   end
 
+  def create
+    user = User.create(user_params)
+    render json: {
+      user: user,
+      scores: []
+    }
+  end
+
+  private
+
+  def user_params
+    params.permit(:username, :first_name, :last_name)
+  end
+
 end
