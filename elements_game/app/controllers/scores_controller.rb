@@ -19,3 +19,4 @@ class ScoresController < ApplicationController
   end
 
 end
+  
